@@ -1,0 +1,18 @@
+.card {
+    margin: 1rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 15px;
+    padding: 1rem 0.7rem 1rem 0.3rem;  
+    background-color: rgba(127, 168, 202, 0.034);
+}
+
+.dark-mode {
+    background-color: rgba(56, 178, 216, 0.281);
+}
+
+.card ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}

@@ -1,0 +1,11 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.inputs-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}

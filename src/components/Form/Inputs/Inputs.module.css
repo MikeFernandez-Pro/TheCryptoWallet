@@ -1,0 +1,82 @@
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 40%;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.inputs-container label{  
+    border-radius: 30px;
+    font-size: 140%;
+}
+
+.inputs-container input{
+    text-align:center;
+    border-radius: 10px;
+    margin-top  : 0.8rem;
+    margin-bottom: 0.8rem;
+    height: 2rem;
+    border:none;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    background-color: transparent;
+    width: 90%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 130%;
+    outline: none;
+}
+
+.inputs-container input:focus{
+    background-color: #00b9f11c;
+}
+
+.background-icon {
+    background-image: url("C:/Users/lezen/React/CryptoWalletProject/src/images/LoupeIcon.png");
+    position: left;
+    padding-left: 30px;
+    background-size: 7%;
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+    background-position-y: 50%;
+}
+
+.dark-mode {
+    background-color: rgb(35, 41, 80);
+}
+
+.dark-mode input{
+    color: white;
+    background-color: white;
+    color: black;
+}
+
+.dark-mode input:focus{
+    background-color: rgb(233, 248, 255);
+}
+
+.invalid-inputs-container {
+    animation: shake 0.3s;
+}
+
+.invalid-inputs-container input{
+    box-shadow: rgba(175, 49, 49, 0.739) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.invalid {
+    margin-top: 1rem;
+    color:red;
+    font-size: 130%;
+    animation: shake 0.3s
+}
+
+@keyframes shake {
+    0% {transform: translate(-2px, 0px) rotate(0deg);}
+    20% {transform: translate(2px, 0px) rotate(0deg);}
+    40% {transform: translate(-2px, 0px) rotate(0deg);}
+    60% {transform: translate(2px, 0px) rotate(0deg);}
+    80% {transform: translate(-2px, 0px) rotate(0deg);}
+    100%{transform: translate(2px, 0px) rotate(0deg);}
+  }

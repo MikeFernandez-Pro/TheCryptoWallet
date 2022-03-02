@@ -1,0 +1,80 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 20;
+	background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .modal {
+	position: fixed;
+	top: 26vh;
+	left: 5%;
+	width: 90%;
+	background-color: white;
+	padding: 1rem;
+	border-radius: 14px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	z-index: 30;
+	animation: slide-down 300ms ease-out forwards;
+  }
+
+  .dark-mode {
+	  color:white;
+	  background-color: rgb(116, 169, 177);
+  }
+
+  .dark-mode input{
+	color:white;
+}
+
+  .content {
+	  display: flex;
+	  flex-direction: column;
+  }
+
+  .content p {
+	  font-size: 36px;
+	  text-align: center;
+	  margin-bottom: 1rem;
+	  margin-top: 1rem;
+  }
+
+  .content form input {
+	border-radius: 10px;
+	  width: 40%;
+	  margin-top  : 0.8rem;
+      margin-bottom: 0.8rem;
+	  border:none;
+	  height: 3rem;
+	  font-family: 'Noto Sans JP', sans-serif;
+	  font-size: 2.5rem;
+	  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+	  background-color: transparent;
+	  text-align: center;
+	  outline: none;
+  }
+
+  .content form input:focus{
+    background-color: #00b9f11c;
+}
+
+  @media (min-width: 768px) {
+	.modal {
+	  width: 40rem;
+	  left: calc(50% - 20rem);
+	}
+  }
+  
+  @keyframes slide-down {
+	from {
+	  opacity: 0;
+	  transform: translateY(-3rem);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }

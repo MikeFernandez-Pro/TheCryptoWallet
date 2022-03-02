@@ -1,0 +1,10 @@
+.legend-container {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 68%;
+    margin: 1rem auto 0.5rem auto;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+}

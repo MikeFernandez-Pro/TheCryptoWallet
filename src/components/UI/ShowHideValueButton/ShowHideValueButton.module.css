@@ -1,0 +1,27 @@
+.opened-img {
+    margin-top: 0.2rem;
+    margin-left: 0.05rem;
+    width: 7%;
+    height: 7%;
+    border-radius: 50%;
+    padding: 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+    -webkit-transform: rotate(0deg); 
+    -webkit-transition-duration: 1s; 
+}
+
+.closed-img {
+    margin-top: 0.2rem;
+    margin-left: 0.05rem;
+    width: 7%;
+    height: 7%;
+    border-radius: 50%;
+    padding: 0.4rem;
+    box-shadow: rgba(44, 62, 80, 0.342) 0px 0px 15px 0px inset;
+    -webkit-transform: rotate(180deg); 
+    -webkit-transition-duration: 1s; 
+}
+
+.dark-mode {
+    box-shadow: rgba(226, 226, 226, 0.363) 0px 0px 15px 0px inset;
+}

@@ -1,0 +1,8 @@
+.list {
+    margin-left: 3rem;
+    list-style-type: none;
+}
+
+.list datalist:focus {
+    display:none;
+}
