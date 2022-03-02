@@ -33,16 +33,6 @@
     background-color: #00b9f11c;
 }
 
-.background-icon {
-    background-image: url("C:/Users/lezen/React/CryptoWalletProject/src/images/LoupeIcon.png");
-    position: left;
-    padding-left: 30px;
-    background-size: 7%;
-    background-repeat: no-repeat;
-    background-position-x: 20%;
-    background-position-y: 50%;
-}
-
 .dark-mode {
     background-color: rgb(35, 41, 80);
 }
