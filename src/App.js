@@ -65,6 +65,7 @@ function App() {
       token.priceChangeDay = tokensInfosFromAPI[index].price_change_24h;
       token.totalValue = Number((token.amount * tokensInfosFromAPI[index].current_price).toFixed(2));
       totalWalletValue += parseFloat(token.totalValue);
+      return true;
     });
     
     dispatch(walletActions.defineTotalValue(totalWalletValue));
@@ -156,14 +157,14 @@ function App() {
           setGraphData(walletDataCpy)
     };
 
-  const constructApp = async () => {
-    await fetchWallet();
-    await fetchTokensList();
-  }
-
   useEffect(() => { 
+    const constructApp = async () => {
+      await fetchWallet();
+      await fetchTokensList();
+    }
+
     constructApp();
-  }, [])
+  }, [fetchWallet, fetchTokensList])
 
   return (
     isLoading ?

@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# The Crypto Wallet
+
+The objective of this project was to propose a simple graphical representation of a cryptocurrency's wallet content.
+
+**A manipulable version deployed on Vercel is ready to use following the link below :*
+- [TheCryptoWalletApp](https://the-crypto-wallet.vercel.app/) 
+
+## Installation
+
+Use npm to install and run the project.
+
+```npm install -y && npm start```
+
+## Usage
+
+- #### Visualize cryptocurrency / percentage
+
+    To visualize a cryptocurrency name or percentage put your **mouse in or out** of the cryptocurrency's element of the chart.
+
+![GraphExample](https://user-images.githubusercontent.com/79382274/156586244-eb7d6412-d486-4998-b82f-c5ffa7221008.gif)
+
+- #### Add a cryptocurrency to the wallet
+
+    To add a cryptocurrency go down to the input field and add its **name or symbol and an amount**.
+    ***(It will add it to your wallet taking into account its current price and will automatically update the chart)***
+
+![InputExample](https://user-images.githubusercontent.com/79382274/156574166-042abb05-c47d-4055-a8b4-5fdf3fd920c6.gif)
+
+---
+
+- #### Modify / Delete a cryptocurrency
+
+    - ##### Modify cryptocurrency's amount :
+        To modify a cryptocurrency's amount **click on the modify** button linked to the cryptocurrency and choose the new amount.
+
+    - ##### Delete cryptocurrency item : 
+        To delete a cryptocurrency **click on the delete** button linked to the cryptocurrency and confirm.
+
+![ModifyAndDeleteExample](https://user-images.githubusercontent.com/79382274/156577573-92dab443-be61-450c-ae24-3a99a512652b.gif)
+
+---
+
+- #### Check modification history
+
+    To check the history of a cryptocurrency just **click on it**.
+    It will show you all amount changes that have been made since the cryptocurrency was added.
+
+![HistoryExample](https://user-images.githubusercontent.com/79382274/156580545-817934b5-7871-4699-9b4e-93135274ebea.gif)
+
+---
+
+- #### Hide cryptocurrency's amount
+
+    If you don't want to show the value of your wallet you can **click on the eye icon** present on the top of the page to hide all cryptocurrency's amount and values.
+
+![HidingExample](https://user-images.githubusercontent.com/79382274/156582260-e73af155-6a90-4789-b8f4-508a43d03ef6.gif)
+
+---
+
+- #### Change theme
+    
+    You can change the default theme of the app by **clicking oh the sun icon** present on the top of the page.
+
+![ThemeExample](https://user-images.githubusercontent.com/79382274/156582731-eb49c7f5-8d6b-464a-bb33-dedbf7421df4.gif)
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
