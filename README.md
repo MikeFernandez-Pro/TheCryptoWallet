@@ -3,7 +3,7 @@
 The objective of this project was to propose a simple graphical representation of a cryptocurrency's wallet content.
 
 **A manipulable version deployed on Vercel is ready to use following the link below :*
-- [TheCryptoWalletApp](https://the-crypto-wallet.vercel.app/) 
+- [TheWalletApp](https://the-crypto-wallet.vercel.app/) 
 
 ## Installation
 
@@ -63,6 +63,20 @@ Use npm to install and run the project.
 
 ![ThemeExample](https://user-images.githubusercontent.com/79382274/156582731-eb49c7f5-8d6b-464a-bb33-dedbf7421df4.gif)
 
+## What remains to do
+- Handle fetch errors
+- Put asynchronous functiosn into an Action Creator
+- Create a custom hook for form inputs
+- Add max items
+- Improve responsiveness
+
+## Possible evolutions
+- Add cryptocurrencies value flucuations per day
+- Authentification system
+- Retrieve wallet info from centralized exchanges (Binance, Kucoin, FTX, ...)
+- Filtering system (price, percentage, TVL, ...)
+- Drag and drop to change items order
+- Add a subgraph for small cryptocurrencies amounts
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
