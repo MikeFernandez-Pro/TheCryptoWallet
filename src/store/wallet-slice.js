@@ -17,6 +17,7 @@ const initialWalletState = {
     },
     totalValue: 0,
     showValue: true,
+    isLoading: true,
     tokensList: []
 };
 
@@ -35,6 +36,9 @@ const walletSlice = createSlice({
         },
         defineTotalValue(state, action) {
             state.totalValue = action.payload;
+        },
+        datasLoaded(state) {
+            state.isLoading = false;
         }
     }
 });

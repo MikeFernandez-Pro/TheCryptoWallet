@@ -5,8 +5,9 @@ import WalletContainer from "./components/Wallet/WalletContainer/WalletContainer
 import useSendDataToWallet from "./hooks/useSendDataToWallet";
 import ThemeContext from "./store/theme-context";
 import Header from "./components/Header/Header";
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { walletActions } from "./store/wallet-slice";
+import { fetchTokensList } from "./store/wallet-actions";
 
 import classes from "./App.module.css";
 import ItemsLegend from "./components/ItemsLegend";
@@ -14,10 +15,8 @@ import ItemsLegend from "./components/ItemsLegend";
 function App() {
 
   const dispatch = useDispatch();
-
+  const isLoading = useSelector((state) => state.wallet.isLoading)
   const [graphData, setGraphData] = useState([]);
-
-  const [isLoading, setIsLoading] = useState(true);
 
   const themeCtx = useContext(ThemeContext);
 
@@ -113,24 +112,7 @@ function App() {
     constructWallet(tokenInfosFromDB, tokensInfosFromAPI);
   };
 
-  const fetchTokensList = async () => {
-    let transformedList = []
-    const URL = "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/coinsList.json"
-    
-    const response = await fetch(URL)
-    const data = await response.json();
-    
-    for (const key in data) {
-      transformedList.push({
-        id: data[key].id,
-        name: data[key].name,
-        symbol: data[key].symbol.toUpperCase(),
-        image: data[key].image
-      })
-    }
-    dispatch(walletActions.constructTokenList(transformedList));
-    setIsLoading(false);
-  }; 
+
 
   const AddNewTokenToWallet  = async (newToken) => {
     // Création nouveau token
@@ -160,11 +142,11 @@ function App() {
   useEffect(() => { 
     const constructApp = async () => {
       await fetchWallet();
-      await fetchTokensList();
+      dispatch(fetchTokensList());
     }
 
     constructApp();
-  }, [fetchWallet, fetchTokensList])
+  }, [fetchWallet, dispatch])
 
   return (
     isLoading ?
