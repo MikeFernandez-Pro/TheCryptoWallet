@@ -111,15 +111,15 @@ You can change the default theme of the app by **clicking oh the sun icon** pres
     <img src="https://user-images.githubusercontent.com/79382274/156734021-51a18826-f01a-4da1-8437-6dd1035a0b0f.gif" alt="Change theme example">
 </p>
 
-## What remains to do
-- [ ] Handle fetch errors
-- [ ] Optimisation (useMemo, useCallback)
-- [ ] Put asynchronous functiosn into an Action Creator
-- [ ] Create a custom hook for form inputs
-- [ ] Add max items
-- [ ] Improve responsiveness and theme background
+## Upcoming features
+- Handle fetch() errors
+- Optimisation (useMemo, useCallback)
+- Put asynchronous functions into an Action Creator
+- Create a custom hook for Form Inputs
+- Add items limit
+- Improve responsiveness and theme background
 
-## Possible upgrades
+## Possible evolutions
 - Add cryptocurrencies value flucuations per day
 - Authentification system
 - Retrieve wallet info from centralized exchanges (Binance, Kucoin, FTX, ...)
