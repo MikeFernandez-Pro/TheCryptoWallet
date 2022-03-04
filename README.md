@@ -52,7 +52,7 @@ Use npm to install and run the project.
 To visualize a cryptocurrency name or percentage put your **mouse in or out** of the cryptocurrency's element of the chart.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/79382274/156586244-eb7d6412-d486-4998-b82f-c5ffa7221008.gif" alt="Visualize cryptocurrency Example">
+    <img src="https://user-images.githubusercontent.com/79382274/156734066-fddbf75e-e8e6-475a-ac58-4db9f3a2334f.gif" alt="Visualize cryptocurrency Example">
 </p>
 
 ---
@@ -63,7 +63,7 @@ To add a cryptocurrency go down to the input field and add its **name or symbol 
 ***(It will add it to your wallet taking into account its current price and will automatically update the chart)***
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/79382274/156574166-042abb05-c47d-4055-a8b4-5fdf3fd920c6.gif" alt="Add a cryptocurrency Exmaple">
+    <img src="https://user-images.githubusercontent.com/79382274/156733889-04959203-d596-4d5c-befd-37d55f13f181.gif" alt="Add a cryptocurrency Exmaple">
 </p>
 
 ---
@@ -77,18 +77,18 @@ To modify a cryptocurrency's amount **click on the modify** button linked to the
 To delete a cryptocurrency **click on the delete** button linked to the cryptocurrency and confirm.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/79382274/156577573-92dab443-be61-450c-ae24-3a99a512652b.gif" alt="Modify / Delete a cryptocurrency Example">
+    <img src="https://user-images.githubusercontent.com/79382274/156733937-7d6883c1-710e-4a14-93a9-3a25b3d76066.gif" alt="Modify / Delete a cryptocurrency Example">
 </p>
 
 ---
 
-### Check modification history
+###  Show cryptocurrency history
 
 To check the history of a cryptocurrency just **click on it**.
 It will show you all amount changes that have been made since the cryptocurrency was added.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/79382274/156580545-817934b5-7871-4699-9b4e-93135274ebea.gif" alt="Check modification history Example">
+    <img src="https://user-images.githubusercontent.com/79382274/156733999-3509894b-be93-43b9-9b6b-1a7acdf35970.gif" alt="Show cryptocurrency history Example">
 </p>
 
 ---
@@ -98,7 +98,7 @@ It will show you all amount changes that have been made since the cryptocurrency
 If you don't want to show the value of your wallet you can **click on the eye icon** present on the top of the page to hide all cryptocurrency's amount and values.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/79382274/156582260-e73af155-6a90-4789-b8f4-508a43d03ef6.gif" alt="Hide cryptocurrency's amount Example">
+    <img src="https://user-images.githubusercontent.com/79382274/156734012-f2556ad9-41f9-498d-a1ea-291e4866a56f.gif" alt="Hide cryptocurrency's amount Example">
 </p>
 
 ---
@@ -108,7 +108,7 @@ If you don't want to show the value of your wallet you can **click on the eye ic
 You can change the default theme of the app by **clicking oh the sun icon** present on the top of the page.
 
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/79382274/156582731-eb49c7f5-8d6b-464a-bb33-dedbf7421df4.gif" alt="Change theme example">
+    <img src="https://user-images.githubusercontent.com/79382274/156734021-51a18826-f01a-4da1-8437-6dd1035a0b0f.gif" alt="Change theme example">
 </p>
 
 ## What remains to do
@@ -117,7 +117,7 @@ You can change the default theme of the app by **clicking oh the sun icon** pres
 - [ ] Put asynchronous functiosn into an Action Creator
 - [ ] Create a custom hook for form inputs
 - [ ] Add max items
-- [ ] Improve responsiveness
+- [ ] Improve responsiveness and theme background
 
 ## Possible upgrades
 - Add cryptocurrencies value flucuations per day
