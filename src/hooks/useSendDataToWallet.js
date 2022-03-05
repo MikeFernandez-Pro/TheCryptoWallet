@@ -1,5 +1,9 @@
-const useSendDataToWallet = async (tokenKey, pathAttribut, requestType, bodyContent, updateWallet) => {
+import { useDispatch } from "react-redux";
+import { fetchWallet } from "../store/wallet-actions";
 
+const useSendDataToWallet = async (tokenKey, pathAttribut, requestType, bodyContent) => {
+
+      const dispatch = useDispatch();
     const URL = tokenKey ?
     "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/wallet/" + tokenKey + pathAttribut + ".json":
     "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/wallet.json";
@@ -11,7 +15,7 @@ const useSendDataToWallet = async (tokenKey, pathAttribut, requestType, bodyCont
               'Content-Type': 'application/json'
             }
       });
-      await updateWallet();
+      dispatch(fetchWallet());
 }
 
 
