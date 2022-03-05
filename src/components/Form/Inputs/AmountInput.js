@@ -1,6 +1,6 @@
 import {useContext} from "react"
 import classes from "./Inputs.module.css"
-import ThemeContext from "../../../store/theme-context";
+import ThemeContext from "../../../store/Theme/theme-context";
 
 const AmountInput = (props) => {
 

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { VictoryPie, VictoryLabel} from "victory";
 import {useSelector } from "react-redux"
-import ThemeContext from "../../store/theme-context";
+import ThemeContext from "../../store/Theme/theme-context";
 
 const Graphic = (props) => {
 

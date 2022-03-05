@@ -5,7 +5,7 @@ import AmountInput from "../Inputs/AmountInput"
 import SubmitButton from "../SubmitButton/SubmitButton"
 import {useDispatch, useSelector} from "react-redux"
 import classes from "./AddItemForm.module.css";
-import { AddNewTokenToWallet } from "../../../store/wallet-actions";
+import { AddItemToWallet } from "../../../store/Wallet/wallet-actions";
 
 const AddItemForm = (props) => {
 
@@ -84,7 +84,7 @@ const AddItemForm = (props) => {
     
     const itemHistoryCreation = [{date: constructDate(), amount: amountInput.value}];
 
-    dispatch(AddNewTokenToWallet({id: itemID, amount: amountInput.value, history: itemHistoryCreation}));
+    dispatch(AddItemToWallet({id: itemID, amount: amountInput.value, history: itemHistoryCreation}));
     setNameInput({value: "", validity: true});
     setAmountInput({value: 0, validity: true});
   };

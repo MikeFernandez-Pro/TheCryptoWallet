@@ -3,10 +3,10 @@ import eyeOpenedIcon from "../../../images/eyeOpenedIcon.png"
 import eyeClosedIcon from "../../../images/eyeClosedIcon.png"
 import eyeOpenedLightIcon from "../../../images/eyeOpenedLightIcon.png"
 import eyeClosedLightIcon from "../../../images/eyeClosedLightIcon.png"
-import ThemeContext from "../../../store/theme-context";
+import ThemeContext from "../../../store/Theme/theme-context";
 import { Fragment } from "react/cjs/react.production.min";
 import {useSelector,useDispatch } from "react-redux"
-import { walletActions } from "../../../store/wallet-slice";
+import { walletActions } from "../../../store/Wallet/wallet-slice";
 import classes from "./ShowHideValueButton.module.css"
 
 const ShowHideValueButton = (props) => {

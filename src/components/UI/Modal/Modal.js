@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import ReactDOM from "react-dom";
-import ThemeContext from "../../../store/theme-context";
+import ThemeContext from "../../../store/Theme/theme-context";
 import classes from "./Modal.module.css";
 
 const Backdrop = (props) => {

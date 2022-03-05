@@ -10,7 +10,7 @@ import ItemInfos from "../ItemInfos/ItemInfos";
 import classes from "./TokenSummary.module.css";
 import ItemHistory from "../ItemHistory/ItemHistory";
 import { useDispatch } from "react-redux";
-import {ModifyTokenFromWallet, RemoveTokenFromWallet} from "../../../store/wallet-actions"
+import {ModifyItemIntoWallet, RemoveItemFromWallet} from "../../../store/Wallet/wallet-actions"
 
 const TokenSummary = (props) => {
   const [showHistory, setShowHistory] = useState(false);
@@ -43,7 +43,7 @@ const TokenSummary = (props) => {
   }
 
   const confirmDeleteItem = () => {
-    dispatch(RemoveTokenFromWallet(props.token.key))
+    dispatch(RemoveItemFromWallet(props.token.key))
     setShowModal(false);
   }
 
@@ -72,7 +72,7 @@ const TokenSummary = (props) => {
       date: constructDate(),
     });
   
-    dispatch(ModifyTokenFromWallet(props.token.key, {
+    dispatch(ModifyItemIntoWallet(props.token.key, {
       id: props.token.id,
       amount: modifiedToken.amountValue,
       history: newHistory

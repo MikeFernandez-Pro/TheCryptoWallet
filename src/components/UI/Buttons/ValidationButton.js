@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ThemeContext from "../../../store/theme-context";
+import ThemeContext from "../../../store/Theme/theme-context";
 import classes from "./ValidationButton.module.css"
 
 const ValidationButton = (props) => {

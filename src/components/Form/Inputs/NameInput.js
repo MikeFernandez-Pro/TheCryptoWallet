@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ListTokens from "../ListTokens/ListTokens";
-import ThemeContext from "../../../store/theme-context";
+import ThemeContext from "../../../store/Theme/theme-context";
 import classes from "./Inputs.module.css"
 
 const NameInput = (props) => {
@@ -18,7 +18,7 @@ const NameInput = (props) => {
               type="text"
               name="name"
               list="tokens"
-              placeholder="Chercher une crypto"
+              placeholder="Search a cryptocurrency"
               value={props.data.value}
               onChange={props.onChange}
               className={classes["background-icon"]}

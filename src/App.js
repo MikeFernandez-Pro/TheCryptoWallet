@@ -2,11 +2,10 @@ import {useEffect, useContext} from "react";
 import AdddItemForm  from "./components/Form/AddItemForm/AddItemForm";
 import Graphic from "./components/Graphic/Graphic";
 import WalletContainer from "./components/Wallet/WalletContainer/WalletContainer";
-import useSendDataToWallet from "./hooks/useSendDataToWallet";
-import ThemeContext from "./store/theme-context";
+import ThemeContext from "./store/Theme/theme-context";
 import Header from "./components/Header/Header";
 import { useDispatch, useSelector } from "react-redux"
-import { fetchTokensList, fetchWallet } from "./store/wallet-actions";
+import { fetchAllowedItemsList, fetchWallet } from "./store/Wallet/wallet-actions";
 
 import classes from "./App.module.css";
 import ItemsLegend from "./components/ItemsLegend";
@@ -23,7 +22,7 @@ function App() {
   useEffect(() => {
     (async function () {
       await dispatch(fetchWallet());
-      await dispatch(fetchTokensList());
+      await dispatch(fetchAllowedItemsList());
     })()
   }, [dispatch])
 

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ThemeContext from "../../../store/theme-context";
+import ThemeContext from "../../../store/Theme/theme-context";
 import themeIcon from "../../../images/themeIcon.png"
 import themeLightIcon from "../../../images/themeLightIcon.png"
 import { Fragment } from "react/cjs/react.production.min";

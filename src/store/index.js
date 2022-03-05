@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import graphicSlice from "./graphic-slice";
-import  walletReducer from "./wallet-slice";
+import graphicSlice from "./Graphic/graphic-slice";
+import  walletReducer from "./Wallet/wallet-slice";
 
 const store = configureStore({
     reducer: {

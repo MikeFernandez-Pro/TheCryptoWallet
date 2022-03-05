@@ -31,7 +31,7 @@ const walletSlice = createSlice({
         showOrHideWallet(state) {
             state.showValue = !state.showValue;
         },
-        constructTokenList(state, action) {
+        constructAllowedItemsList(state, action) {
             state.tokensList = action.payload
         },
         defineTotalValue(state, action) {
