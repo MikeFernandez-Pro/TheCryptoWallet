@@ -94,6 +94,48 @@ const constructWallet = (tokenInfosFromDB, tokensInfosFromAPI, dispatch) => {
     dispatch(walletActions.constructWallet(tempWallet));
   };
 
+export const AddNewTokenToWallet  = (newToken) => {
+  return async (dispatch) => {
+    const URL = "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/wallet.json";
+    const response = await fetch(URL, {
+      method: "POST",
+      body: JSON.stringify(newToken),
+      headers: {
+            'Content-Type': 'application/json'
+          }
+    });
+    dispatch(fetchWallet());
+  };
+};
+
+export const RemoveTokenFromWallet  = (tokenKey) => {
+  return async (dispatch) => {
+    const URL = "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/wallet/" + tokenKey + ".json";
+    const response = await fetch(URL, {
+      method: "DELETE",
+      body: JSON.stringify(""), //remove body
+      headers: {
+            'Content-Type': 'application/json'
+          }
+    });
+    dispatch(fetchWallet());
+  };
+};
+
+export const ModifyTokenFromWallet  = (tokenKey, tokenInfos) => {
+  return async (dispatch) => {
+    const URL = "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/wallet/" + tokenKey + ".json";
+    const response = await fetch(URL, {
+      method: "PUT",
+      body: JSON.stringify(tokenInfos),
+      headers: {
+            'Content-Type': 'application/json'
+          }
+    });
+    dispatch(fetchWallet());
+  }
+};
+
 export const fetchWallet = () => {
   return async (dispatch) => {
   // Récupère donnés des deux DB (Notre et CoinGecko)

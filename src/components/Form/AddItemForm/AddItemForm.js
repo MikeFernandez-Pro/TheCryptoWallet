@@ -3,8 +3,9 @@ import Card from "../../UI/Card/Card"
 import NameInput from "../Inputs/NameInput"
 import AmountInput from "../Inputs/AmountInput"
 import SubmitButton from "../SubmitButton/SubmitButton"
-import {useSelector} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import classes from "./AddItemForm.module.css";
+import { AddNewTokenToWallet } from "../../../store/wallet-actions";
 
 const AddItemForm = (props) => {
 
@@ -14,6 +15,7 @@ const AddItemForm = (props) => {
 
     const walletTokens = useSelector( (state) => state.wallet.value)
     const tokensList = useSelector( (state) => state.wallet.tokensList)
+    const dispatch = useDispatch();
 
     const findTokenInList = (list) => {
         const cleanedName = nameInput.value.toLowerCase();
@@ -82,7 +84,7 @@ const AddItemForm = (props) => {
     
     const itemHistoryCreation = [{date: constructDate(), amount: amountInput.value}];
 
-    props.addNewTokenToWallet({id: itemID, amount: amountInput.value, history: itemHistoryCreation})
+    dispatch(AddNewTokenToWallet({id: itemID, amount: amountInput.value, history: itemHistoryCreation}));
     setNameInput({value: "", validity: true});
     setAmountInput({value: 0, validity: true});
   };

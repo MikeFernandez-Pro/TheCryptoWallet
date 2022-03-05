@@ -20,20 +20,6 @@ function App() {
 
   const themeCtx = useContext(ThemeContext);
 
-  const AddNewTokenToWallet  = async (newToken) => {
-    // Création nouveau token
-    useSendDataToWallet("", "", "POST", newToken);
-  }
-
-  const RemoveTokenFromWallet = async (tokenKey, tokenID) => {
-    useSendDataToWallet(tokenKey, "", "DELETE", "");
-  }
-
-  const ModifyTokenFromWallet = async (tokenKey, tokenInfos) => {
-    useSendDataToWallet(tokenKey, "", "PUT", tokenInfos);
-    //ici ajouter logique
-  };
-
   useEffect(() => {
     (async function () {
       await dispatch(fetchWallet());
@@ -49,13 +35,8 @@ function App() {
         <Graphic dataGraph={graphData}/>
         <div className={`${classes.container} ${!themeCtx.lightTheme ? classes["dark-mode"] : ""}`}>
           <ItemsLegend />
-          <WalletContainer
-            removeToken={RemoveTokenFromWallet}
-            modifyToken={ModifyTokenFromWallet }
-          />
-          <AdddItemForm
-            addNewTokenToWallet={AddNewTokenToWallet}
-          />
+          <WalletContainer />
+          <AdddItemForm />
         </div>
       </div>
   );

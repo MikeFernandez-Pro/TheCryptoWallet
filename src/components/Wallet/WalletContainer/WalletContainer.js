@@ -13,8 +13,6 @@ const WalletContainer = (props) => {
                         <TokenSummary
                             token={token}
                             key={token.id}
-                            removeToken={props.removeToken}
-                            modifyToken={props.modifyToken}
                         />
                 )
             }
