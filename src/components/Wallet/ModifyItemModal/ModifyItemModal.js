@@ -14,10 +14,10 @@ const ModifyItemModal = (props) => {
       <form className={classes.container} onSubmit={props.confirmModifyItem}>
         <input
           type="number"
-          value={props.modifiedTokenAmount}
+          value={props.modifiedItem.amountValue}
           onChange={props.amountValueEventHandler}
         ></input>
-        {!props.isModifiedTokenAmountValid && (
+        {!props.modifiedItem.isAmountValid && (
           <p className={classes.invalid}>Please enter a valid amount.</p>
         )}
         <div className={classes["buttons-container"]}>

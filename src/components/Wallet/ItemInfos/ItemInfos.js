@@ -10,13 +10,13 @@ const ItemInfos = (props) => {
     return (
         <Fragment>
             <div className={classes["name-container"]}>
-                <li>{props.name}</li>
-                <li className={classes.symbol}>({props.symbol})</li>
+                <li>{props.item.name}</li>
+                <li className={classes.symbol}>({props.item.symbol})</li>
             </div>
-            <li>{!showValue ? hided : props.amount}</li>
-            <li>{!showValue ? hided : props.totalValue.toString() + "$"}</li>
-            <li>{!showValue ? hided : props.currentPrice.toString() + "$"}</li>
-            <li>{props.percentage}%</li>
+            <li>{!showValue ? hided : props.item.amount}</li>
+            <li>{!showValue ? hided : props.item.totalValue.toString() + "$"}</li>
+            <li>{!showValue ? hided : props.item.currentPrice.toString() + "$"}</li>
+            <li>{props.item.percentage}%</li>
         </Fragment>
     );
 };
