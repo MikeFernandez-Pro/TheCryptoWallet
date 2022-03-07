@@ -10,7 +10,6 @@
 </p>
 <br>
 
-
 **Author** - Mike Fernandez
 ## Table of contents
 
@@ -25,10 +24,10 @@
   - [Modify / Delete a cryptocurrency](#modify--delete-a-cryptocurrency)
     - [Modify cryptocurrency's amount :](#modify-cryptocurrencys-amount-)
     - [Delete cryptocurrency item :](#delete-cryptocurrency-item-)
-  - [Check modification history](#check-modification-history)
+  - [Show cryptocurrency history](#show-cryptocurrency-history)
   - [Hide cryptocurrency's amount](#hide-cryptocurrencys-amount)
   - [Change theme](#change-theme)
-- [What remains to do](#what-remains-to-do)
+- [Upcoming features](#upcoming-features)
 - [Possible evolutions](#possible-evolutions)
 - [License](#license)
 
