@@ -111,12 +111,12 @@ You can change the default theme of the app by **clicking oh the sun icon** pres
 </p>
 
 ## Upcoming features
-- Handle fetch() errors
-- Optimisation (useMemo, useCallback)
-- Put asynchronous functions into an Action Creator
-- Create a custom hook for Form Inputs
-- Add items limit
-- Improve responsiveness and theme background
+- [ ] Handle fetch() errors
+- [ ] Optimisation (useMemo, useCallback)
+- [x] Put asynchronous functions into an Action Creator
+- [x] Create a custom hook for Form Inputs
+- [ ] Add items limit
+- [ ] Improve responsiveness and theme background
 
 ## Possible evolutions
 - Add cryptocurrencies value flucuations per day
