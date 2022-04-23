@@ -131,7 +131,7 @@ const CryptosList = (props) => {
               <label className={classes.legend}>Current Price</label>
               <label>
                 {item.currentPrice}{" "}
-                <span style={{ fontSize: "0.8rem" }}>USD</span>
+                <span className={classes.type}>USD</span>
               </label>
             </div>
             <div className={`${classes["attribut-container"]} ${!themeCtx.lightTheme? classes["dark-theme-attribut"] : ""}`}>

@@ -26,6 +26,7 @@
     gap: 2rem;
 }
 
+
 .header button {
     font-family: 'Noto Sans JP', sans-serif;
     border: none;
@@ -42,8 +43,6 @@
     padding: 0.8rem;
     padding-top: 1rem;
 }
-
-
 
 .header a:hover {
     background-color: rgba(196, 194, 194, 0.317);
@@ -96,6 +95,32 @@
     -webkit-transform: rotate(145deg); 
     -webkit-transition-duration: 1s; 
 }
+
+
+@media (max-width: 530px) {
+    .header {
+        gap: 0rem;
+    }
+    .header ul {
+        gap: 0rem;
+    }
+    .header a {
+        font-size: 3vw;
+    }
+    .title h1 {
+        font-size: 3.9vw;
+    }
+    .logo {
+        width: 9vw;
+    }
+    .display-options {
+        margin-top: 1vw;
+        margin-left: auto;
+    }
+    .display-options img {
+        width: 7.5vw;
+    }
+  }
 
 @keyframes rotate {
     to {
