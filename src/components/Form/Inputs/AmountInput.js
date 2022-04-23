@@ -12,15 +12,16 @@ const AmountInput = (props) => {
 
     return (
         <div className={inputClasses} >
-            <label htmlFor="amount">Amount</label>
+            <label htmlFor="amount">Coin's Amount</label>
             <input
               type="number"
               name="amount"
-              value={props.data.value}
+              value={props.data.value === 0 ? "" : props.data.value}
               onChange={props.onChange}
+              placeholder="Enter an Amount"
             />
             {!props.data.validity && (
-              <p className={classes.invalid}>Please enter a valid amount.</p>
+              <p className={classes.invalid}>Invalid Amount</p>
             )}
           </div>
     );

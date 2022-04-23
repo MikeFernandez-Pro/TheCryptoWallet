@@ -1,28 +1,31 @@
 .validation-button {
-    margin: 0.3rem;
     font: inherit;
-    background-color: #45B29D;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 50px;
+    padding: 0.4rem 0rem;
+    border-radius: 20px;
     cursor: pointer;
-    color: white;
-    font-size: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px 0px, rgba(0, 0, 0, 0.23) 0px 3px 6px 0px;
+    color: #F4EEFF;
+    font-size: 1rem;
+    border:none;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%), 0 3px 6px 0 rgb(0 0 0 / 23%);
+    background-color: #45b29d;
+    width: 70%;
+    margin-left: 12%;
+    margin-right: auto;
   }
   
   .validation-button:hover,
   .validation-button:active {
     background-color: #51c564;
-    border-color: #000000;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
   }
 
   .dark-mode {
-    background-color: rgb(129, 129, 194);
+    background-color: #0E6E9D;
+    color: #F4EEFF;
   }
 
   .dark-mode:hover,
   .dark-mode:active {
-    background-color: rgb(63, 125, 155);
+    background-color: #3aace1;
+    border-color: #817395;
   }

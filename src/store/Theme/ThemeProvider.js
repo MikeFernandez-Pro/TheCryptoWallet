@@ -3,7 +3,7 @@ import ThemeContext from "./theme-context";
  
 const ThemeProvider = (props) => {
 
-    const [lightTheme, setLightTheme] = useState(true)
+    const [lightTheme, setLightTheme] = useState(false)
      
     const changeThemeHandler = () => {
         setLightTheme((prevState) => !prevState);

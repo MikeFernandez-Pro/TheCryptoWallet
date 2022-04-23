@@ -6,10 +6,6 @@
     background-color: rgba(127, 168, 202, 0.034);
 }
 
-.dark-mode {
-    background-color: rgba(56, 178, 216, 0.281);
-}
-
 .card ul {
     list-style-type: none;
     display: flex;

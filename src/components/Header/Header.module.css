@@ -1,18 +1,104 @@
 .header {
     display: flex;
-   
+    align-items: center;
+    gap: 2rem;
+    padding: 0.7rem 0 0.5rem 1.2rem;
+    color: #7A6EAA;
+    background-color: #fefdfe;
+    border-bottom: 2px solid rgb(231, 227, 235);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    background-color: #f5f3f5;
 }
 
-.header h1 {
-    flex-grow: 2;
-    margin-left: 20%;
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 4rem;
-    padding-bottom: 2rem;
+.dark-mode {
+    color: rgb(178 168 205);
+    background-color: rgb(39 38 44);
+    border-bottom: 2px solid #383241;
 }
 
-.header img {
-    margin: 1.5rem;
-    margin-top: 2.5rem;
+.header ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
 }
+
+.header button {
+    font-family: 'Noto Sans JP', sans-serif;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem  2rem;
+    padding-bottom: 0.8rem;
+    width: 13rem;
+}
+
+.header a {
+    color: #524589;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.8rem;
+    padding-top: 1rem;
+}
+
+
+
+.header a:hover {
+    background-color: rgba(196, 194, 194, 0.317);
+    border-radius:15px;
+}
+
+.dark-mode a {
+    color: #b2a8cd;
+}
+
+.dark-mode a:hover {
+    background-color: rgba(80, 79, 81, 0.317);
+    border-radius:15px;
+}
+
+.display-options {
+    display: flex;
+    margin-left: auto;
+    padding-right: 1.2rem;
+    gap: 1rem;
+}
+
+.display-options img{
+    width: 2.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.title h1 {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.dark-title h1 {
+    color:white;
+}
+
+.logo {
+    width: 3rem;
+    -webkit-transition-duration: 1s; 
+}
+
+.title:hover .logo {
+    -webkit-transform: rotate(145deg); 
+    -webkit-transition-duration: 1s; 
+}
+
+@keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }

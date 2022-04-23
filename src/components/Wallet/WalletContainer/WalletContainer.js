@@ -1,6 +1,5 @@
 import {useSelector} from "react-redux"
 import TokenSummary from "../TokenSummary/TokenSummary"
-import ItemsLegend from "../ItemsLegend/ItemsLegend";
 
 import classes from "./WalletContainer.module.css"
 import { Fragment } from "react/cjs/react.production.min";
@@ -11,14 +10,18 @@ const WalletContainer = (props) => {
 
     return (
         <Fragment>
-        <ItemsLegend />
         <ul className={classes.wallet}>
             {
-                    walletTokens.map((token) =>
-                        <TokenSummary
-                            token={token}
-                            key={token.id}
-                        />
+                    walletTokens.map((token, index) => {
+                        
+                        return (
+                            <TokenSummary
+                                token={token}
+                                key={token.id}
+                                index={index}
+                            />
+                        );
+                    }
                 )
             }
         </ul>

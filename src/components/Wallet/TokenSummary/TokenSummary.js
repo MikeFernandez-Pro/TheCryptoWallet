@@ -1,18 +1,16 @@
-import React, { useState } from "react";
-import TokenSymbolButton from "../TokenButton/TokenSymbolButton";
-import Card from "../../UI/Card/Card";
+import React, { useState,Fragment, useContext } from "react";
 import ValidationButton from "../../UI/Buttons/ValidationButton";
 import CancelationButton from "../../UI/Buttons/CancelationButton";
 import ModifyItemModal from "../ModifyItemModal/ModifyItemModal";
 import DeleteItemModal from "../DeleteItemModal/DeleteItemModal";
 import ItemInfos from "../ItemInfos/ItemInfos";
-import ItemHistory from "../ItemHistory/ItemHistory";
 import { useDispatch } from "react-redux";
 import { ModifyItemIntoWallet, RemoveItemFromWallet } from "../../../store/Wallet/wallet-actions";
+import ThemeContext from "../../../store/Theme/theme-context";
+
 import classes from "./TokenSummary.module.css";
 
 const TokenSummary = (props) => {
-  const [showHistory, setShowHistory] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isModified, setIsModified] = useState(false);
 
@@ -22,6 +20,8 @@ const TokenSummary = (props) => {
   });
 
   const dispatch = useDispatch();
+
+  const themeCtx = useContext(ThemeContext);
 
   const amountValueEventHandler = (event) => {
     if (!modifiedToken.isAmountValid)
@@ -33,10 +33,6 @@ const TokenSummary = (props) => {
       ...previousState,
       amountValue: event.target.value,
     }));
-  };
-
-  const showHistoryHandler = () => {
-    setShowHistory(!showHistory);
   };
 
   const modifyItemHandler = () => {
@@ -66,28 +62,15 @@ const TokenSummary = (props) => {
     return false;
   };
 
-  const constructDate = () => {
-    const date = new Date().toDateString();
-
-    return date.substring(date.search(" "));
-  };
-
   const confirmModifyItem = (event) => {
     event.preventDefault();
 
     if (!amountValidityCheck()) return;
 
-    const newHistory = [...props.token.history];
-    newHistory.unshift({
-      amount: modifiedToken.amountValue,
-      date: constructDate(),
-    });
-
     dispatch(
       ModifyItemIntoWallet(props.token.key, {
         id: props.token.id,
         amount: modifiedToken.amountValue,
-        history: newHistory,
       })
     );
     setModifiedToken((previousState) => ({ ...previousState, amountValue: 0 }));
@@ -102,6 +85,8 @@ const TokenSummary = (props) => {
       isAmountValid: true,
     }));
   };
+
+  const firstItemClass =  !themeCtx.lightTheme? classes["first-light"] : classes.first;
 
   return (
     <React.Fragment>
@@ -120,27 +105,21 @@ const TokenSummary = (props) => {
           cancelDeletion={cancelDeleteItem}
         />
       )}
-      <Card>
-        <ul className={classes["token-infos"]}>
-          <TokenSymbolButton
-            image={props.token.image}
-            alt={props.token.name}
-            showHistoryHandler={showHistoryHandler}
-          />
+      <Fragment>
+        <li className={`${classes["token-container"]} ${!themeCtx.lightTheme? classes["dark-theme"]  : ""} ${props.index === 0 ? firstItemClass : ""}`}>
           <ItemInfos
             item = {props.token}
           />
           <div className={classes["buttons-container"]}>
             <ValidationButton onClick={modifyItemHandler}>
-              Modify
+              Modify Amount
             </ValidationButton>
             <CancelationButton onClick={deleteItemHandler}>
-              Delete
+               Delete Coin
             </CancelationButton>
           </div>
-        </ul>
-        {showHistory && <ItemHistory history={props.token.history} />}
-      </Card>
+        </li>
+      </Fragment>
     </React.Fragment>
   );
 };

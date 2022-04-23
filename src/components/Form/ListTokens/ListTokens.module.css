@@ -1,8 +1,28 @@
-.list {
-    margin-left: 3rem;
+.container {
     list-style-type: none;
+    border: 2px solid rgb(215, 210, 220);
+    border-top: none;
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+    background-color: white;
+    cursor: pointer;
 }
 
-.list datalist:focus {
-    display:none;
+.container * {
+    color: #524589;
 }
+
+.legend {
+    font-size: 0.8rem;
+}
+
+.dark-mode {
+    background-color: black;
+    border: 2px solid #383241;
+    border-top: none;
+}
+
+.dark-mode * {
+    color: #a399ba;
+}
+

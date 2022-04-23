@@ -1,19 +1,20 @@
 .cancelation-button {
-    margin: 0.3rem;
     font: inherit;
-    background-color: #c75b51;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 50px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
     cursor: pointer;
-    color: white;
-    font-size: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px 0px, rgba(0, 0, 0, 0.23) 0px 3px 6px 0px;
-  }
-  
-  .cancelation-button:hover,
-  .cancelation-button:active {
-    background-color: #e04e4e;
-    border-color: #000000;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  }
+    color: #F4EEFF;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%), 0 3px 6px 0 rgb(0 0 0 / 23%);
+    background-color: #b4392e;
+    width: 70%;
+    margin-left: 12%;
+    margin-right: auto;
+}
+
+.cancelation-button:hover,
+.cancelation-button:active {
+    background-color: #ce2525;
+    border-color: #817395;
+}

@@ -1,11 +1,16 @@
+.title {
+    width: max-content;
+    margin: 4rem auto 1.5rem auto;
+}
+
 .form{
     display: flex;
     flex-direction: column;
     font-family: 'Noto Sans JP', sans-serif;
+    margin: 0.5rem 0 2rem 0;
 }
 
 .inputs-container {
     display: flex;
-    justify-content: space-around;
-    margin: 1rem;
+    justify-content: center;
 }

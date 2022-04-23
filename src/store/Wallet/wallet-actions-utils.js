@@ -1,11 +1,14 @@
 import { walletActions } from "./wallet-slice";
 import { graphicActions } from "../Graphic/graphic-slice";
 import { fetchWallet } from "./wallet-actions";
+import { Component } from "react";
 
 export const sendHTTPRequestToDB = async (itemKey, requestMethod, bodyContent, dispatch) => {
     const URL = itemKey ?
       "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/wallet/" + itemKey + ".json":
       "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/wallet.json"
+      
+    try {
       const response = await fetch(URL, {
         method: requestMethod,
         body: JSON.stringify(bodyContent),
@@ -13,14 +16,34 @@ export const sendHTTPRequestToDB = async (itemKey, requestMethod, bodyContent, d
               'Content-Type': 'application/json'
             }
       });
+
+      if (!response.ok) {
+        throw new Error('An error occurred : Failed to communicate with database')
+      }
+
       dispatch(fetchWallet());
+      
+    }  catch (error) {
+      window.alert('An error occurred : Failed to communicate with database');
+    }
 };
   
 export const fetchItemsFromDB = async () => {
     const URL = "https://thewallet-77fd4-default-rtdb.europe-west1.firebasedatabase.app/wallet.json"
+    
+    try {
     const response = await fetch(URL);
+
+    if (!response.ok) {
+      throw new Error("An error occurred : Failed to retrieve Wallet's data from the database")
+    }
+
     const itemsInfosFromDB = await response.json();
     return itemsInfosFromDB;
+
+  }  catch (error) {
+    window.alert("An error occurred : Failed to retrieve Wallet's data from the database");
+  }
 };
   
 export const constructAPIRequestURL = (wallet) => {
@@ -39,9 +62,20 @@ export const constructAPIRequestURL = (wallet) => {
   
 export const fetchItemsInfosFromAPI = async (wallet) => {
     const URL = constructAPIRequestURL(wallet);
-    const response = await fetch(URL);
-    const itemsInfosFromAPI = await response.json();
-    return itemsInfosFromAPI;
+
+    try {
+      const response = await fetch(URL);
+
+      if (!response.ok) {
+        throw new Error('An error occurred : Failed to retrieve data from API')
+      }
+
+      const itemsInfosFromAPI = await response.json();
+      return itemsInfosFromAPI;
+
+    }  catch (error) {
+      window.alert('An error occurred : Failed to retrieve data from API');
+    }
 };
   
 export const constructDBPartOfWallet = (tempWallet, itemsInfosFromDB) => {

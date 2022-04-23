@@ -10,7 +10,6 @@ const initialWalletState = {
         currentPrice: 0,
         totalValue: 0,
         percentage: "",
-        history: [],
         image: "",
         priceChangeDay: 0,
         rank: 0

@@ -1,21 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
-  margin:0px;
+  margin: 0px;
   padding: 0px;
+  scroll-behavior: smooth;
 }
 
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: #9090902d;
 }
-
-
 
 .app h1 {
   text-align: center;
@@ -63,31 +61,6 @@ body {
   flex: 1;
 }
 
-/* button {
-  font: inherit;
-  background-color: #67c5fb;
-  color: rgb(0, 0, 0);
-  border: 2px solid #000000;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover,
-button:active {
-  background-color: #29aadd;
-  border-color: #000000;
-}
-
-button:disabled, 
-button:disabled:hover,
-button:disabled:active {
-  background-color: #ccc;
-  color: #292929;
-  border-color: #ccc;
-  cursor: not-allowed;
-} */
-
 .form-actions {
   text-align: right;
 }
@@ -109,3 +82,19 @@ button:disabled:active {
 .error-text {
   color: #b40e0e;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(184, 173, 210);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: rgb(55 47 71) 0px 0px 5px inset;
+  border-radius: 10px;
+}
+
+

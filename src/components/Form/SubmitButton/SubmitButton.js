@@ -4,9 +4,7 @@ const SubmitButton = () => {
 
     return (
         <div className={classes["submit-button-container"]}>
-          <button type="submit" name="submit">
-            Add new crypto to Wallet
-          </button>
+          <button type="submit" name="submit">APPEND</button>
         </div>
     );
 };

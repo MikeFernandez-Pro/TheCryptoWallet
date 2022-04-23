@@ -9,25 +9,30 @@
   }
   
   .modal {
+	color: #524589;
 	position: fixed;
 	top: 26vh;
 	left: 5%;
 	width: 90%;
-	background-color: white;
+	border: 2px solid #e7e3eb;
+	background-color: #f5f3f5;
 	padding: 1rem;
 	border-radius: 14px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 	z-index: 30;
 	animation: slide-down 300ms ease-out forwards;
+
   }
 
   .dark-mode {
 	  color:white;
-	  background-color: rgb(116, 169, 177);
+	  background-color: #1e1d20;
+		border: 2px solid #383241;
   }
 
-  .dark-mode input{
-	color:white;
+  .dark-mode .content form input{
+		border: 2px solid #383241;
+		background-color: black;
+		color: white;
 }
 
   .content {
@@ -43,22 +48,23 @@
   }
 
   .content form input {
-	border-radius: 10px;
+	 border-radius: 16px;
 	  width: 40%;
 	  margin-top  : 0.8rem;
-      margin-bottom: 0.8rem;
-	  border:none;
+    margin-bottom: 0.8rem;
+	  border: 1px solid #e7e3eb;
 	  height: 3rem;
 	  font-family: 'Noto Sans JP', sans-serif;
-	  font-size: 2.5rem;
-	  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+	  font-size: 1.2rem;
+		outline: none;
 	  background-color: transparent;
 	  text-align: center;
-	  outline: none;
+		background-color: white;
   }
 
   .content form input:focus{
-    background-color: #00b9f11c;
+		outline: none;
+    border-color: #b1b1b1;
 }
 
   @media (min-width: 768px) {

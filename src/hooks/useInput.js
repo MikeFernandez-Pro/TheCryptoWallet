@@ -28,6 +28,8 @@ const useInput = (inputType) => {
             return {...state, value: action.value};
         if (action.type === "INVALID")
             return {...defaultState, validity: false};
+        if (action.type === "OVERWRITE")
+            return {...state, value: action.value};
         if (action.type === "RESET")
             return defaultState;
         return defaultState;    
@@ -44,6 +46,10 @@ const useInput = (inputType) => {
         }
         dispatchInput({type: "UPDATE", value: event.target.value});
     };
+    
+    const inputValueOverwrite = (newValue) => {
+      dispatchInput({type: "OVERWRITE", value: newValue});
+    };
 
     const nameInputValidityHandler = () => {
         const tokenFounded = findTokenInList(input, tokensList);
@@ -52,13 +58,13 @@ const useInput = (inputType) => {
           const tokenAlreadyInWallet = findTokenInList(input, walletTokens);
           if (tokenAlreadyInWallet) {
             dispatchInput({type: "INVALID"})
-            setErrorMessage("Token already added to the wallet");
+            setErrorMessage("Coin already present in the wallet");
             return null;
           }
           return tokenFounded.id;
         }
         dispatchInput({type: "INVALID"})
-        setErrorMessage("Please, enter a valid name");
+        setErrorMessage("Invalid Name");
         return null;
       };
 
@@ -79,6 +85,7 @@ const useInput = (inputType) => {
         nameInputValidityHandler,
         amountInputValidityHandler,
         resetInputHandler,
+        inputValueOverwrite,
         errorMessage
     };
 
