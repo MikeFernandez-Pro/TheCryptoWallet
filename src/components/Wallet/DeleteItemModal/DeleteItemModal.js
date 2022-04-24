@@ -8,7 +8,7 @@ const DeleteItemModal = (props) => {
 
     return (
         <Modal>
-            <p>Are you sure?</p>
+            <h1>Are you sure?</h1>
             <div className={classes["buttons-container"]}>
                 <ValidationButton onClick={props.confirmDeletion}>
                     Yes

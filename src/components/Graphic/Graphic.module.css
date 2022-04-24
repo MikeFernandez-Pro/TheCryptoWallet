@@ -21,3 +21,28 @@
 .empty-icon {
   width: 15%;
 }
+
+@media (max-width: 530px) {
+  .graph {
+    padding-top: 2vw;
+  }
+  
+  .empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vw;
+    gap: 3vw;
+  }
+  
+  .empty label {
+    font-size: 6vw;
+  }
+  
+  .empty-icon {
+    width: 15%;
+  }
+  
+}
+

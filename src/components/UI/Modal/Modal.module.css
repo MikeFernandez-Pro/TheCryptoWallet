@@ -67,12 +67,30 @@
     border-color: #b1b1b1;
 }
 
-  @media (min-width: 768px) {
+@media (max-width: 530px) {
 	.modal {
-	  width: 40rem;
-	  left: calc(50% - 20rem);
-	}
-  }
+		width: 60%;
+		padding: 3vw;
+		margin-left: auto;
+		margin-right: auto;
+		}
+		.modal h1 {
+			font-size: 4.5vw;
+			text-align: center;
+		}
+	.content p {
+			margin-bottom: 2vw;
+			margin-top: 2vw;
+		}
+	
+		.content form input {
+			margin-top  :3vw;
+			margin-bottom:3vw;
+			height: 8vw;
+			font-size: 3vw;
+		}
+}
+
   
   @keyframes slide-down {
 	from {

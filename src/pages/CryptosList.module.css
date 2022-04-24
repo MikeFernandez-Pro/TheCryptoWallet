@@ -167,7 +167,7 @@
   
   .active-sort {
     border-bottom: 1px solid #000000;
-    margin-bottom: 0.2rem; 
+    margin-bottom: 0.2rem;
   }
   
   .sort-choices li {
@@ -312,12 +312,7 @@
   .sorting-container ul{
     width: 30vw;
     border-radius: 20px;
-    background-color: #372f47;
-    border: none;
-    box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px -1px inset;
-    list-style: none;
-    position: absolute;
-    top: 31.5vw;
+    top: 34vw;
   }
   .sorting-direction-container {
     display: flex;

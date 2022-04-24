@@ -32,3 +32,35 @@
     display: flex;
     flex-direction: column;
 }
+.type {
+    font-size: 0.8rem;
+  }
+
+@media (max-width: 530px) {
+    .token-presentation {
+        padding-left: 2vw;
+        font-size: 3vw;
+    }
+      
+    .token-presentation img{
+        width: 6vw;
+        padding: 2.4vw 0;
+    }
+    
+    .token-name {
+        padding-left: 1vw;
+    }
+    
+    .symbol {
+        color: #a399ba;
+        font-size: 2.4vw;
+    }
+    
+    .light-symbol {
+        color : #7a6eaa;
+        font-size: 2.4vw;
+    }
+    .type {
+        font-size: 2.5vw;
+      }
+}

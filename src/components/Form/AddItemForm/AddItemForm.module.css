@@ -13,4 +13,18 @@
 .inputs-container {
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
+
+@media (max-width: 530px) {
+    .title {
+        margin: 4vw auto 4vw auto;
+        font-size: 5vw;
+    }
+    .form{
+        margin: 0.5vw 0 2vw 0;
+    }
+    .inputs-container {
+        gap: 8vw;
+    }
+  }

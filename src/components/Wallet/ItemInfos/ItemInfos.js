@@ -7,7 +7,7 @@ import classes from "./ItemInfos.module.css"
 const ItemInfos = (props) => {
 
     const showValue = useSelector((state) => state.wallet.showValue);
-    const hided = "*******";
+    const hided = window.innerWidth > 500 ? "*******" : "*****";
 
     const themeCtx = useContext(ThemeContext);
     const symbolClass = !themeCtx.lightTheme ? classes.symbol : classes["light-symbol"];
@@ -17,21 +17,21 @@ const ItemInfos = (props) => {
             <div className={classes["token-presentation"]}>
                 <img src={props.item.image} alt={props.item.symbol} />
                 <div className={classes["token-name"]}>
-                    <label className={symbolClass}>{props.item.symbol}</label>
-                    <label>{props.item.name}</label>
+                    <label className={window.innerWidth > 500 && symbolClass}>{props.item.symbol}</label>
+                    {window.innerWidth > 500 && <label>{props.item.name}</label>}
                 </div>
             </div>
             <div className={classes.item}>
-                <label className={symbolClass}>Current Price (USD)</label>
-                <label>{props.item.currentPrice.toString()}<span style={{"fontSize": "0.8rem"}}> USD</span></label>
+                <label className={symbolClass}>Current Price{window.innerWidth > 500 && " (USD)"}</label>
+                <label>{props.item.currentPrice.toString()}<span className={classes.type}> USD</span></label>
             </div>
             <div className={classes.item}>
                 <label className={symbolClass}>Amount</label>
-                <label>{!showValue ? hided : props.item.amount}<span style={{"fontSize": "0.8rem"}}> {props.item.symbol}</span></label>
+                <label>{!showValue ? hided : props.item.amount}<span className={classes.type}> {props.item.symbol}</span></label>
             </div>
             <div className={classes.item}>
-                <label className={symbolClass}>Total Value (USD)</label>
-                <label>{!showValue ? hided : props.item.totalValue.toString()}<span style={{"fontSize": "0.8rem"}}> USD</span></label>
+                <label className={symbolClass}>Total Value{window.innerWidth > 500 && " (USD)"}</label>
+                <label>{!showValue ? hided : props.item.totalValue.toString()}<span className={classes.type}> USD</span></label>
             </div>
             <div className={classes.item}>
                 <label className={symbolClass}>Percentage</label>

@@ -22,7 +22,7 @@
   text-align: center;
   font-size: 1rem;
   width: 20%;
-  color: #524589;
+  color: #524589
 }
 
 .dark-theme div {
@@ -34,4 +34,19 @@
     flex-direction: column;
     gap: 0.8rem;
     padding: 0.5rem 0rem;
+}
+
+@media (max-width: 530px) {
+  .token-container {
+    padding: 2vw 0;
+  }
+  
+  .token-container div {
+    font-size: 3vw;
+  }
+  
+  .buttons-container {
+      gap: 2.4vw;
+      padding: 1vw 0;
+  }
 }

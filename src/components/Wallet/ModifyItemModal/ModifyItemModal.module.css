@@ -52,3 +52,29 @@
 .invalid {
     color: red;
 }
+
+@media (max-width: 530px) {
+    .title {
+        font-size: 4.5vw;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    .container p{
+        font-size: 4vw;
+        margin-top: 1vw;
+    }
+    
+    .container input {
+        margin-top  : 2.4vw;
+        margin-bottom: 2.4vw;
+        border:none;
+        height: 3vw;
+        font-size: 5vw;
+      }
+    .buttons-container button{
+        width: 30%;
+        height: 7vw;
+        margin: 2vw;
+        font-size: 3vw;
+    }
+  }

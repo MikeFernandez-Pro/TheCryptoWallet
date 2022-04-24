@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 import classes from "./Header.module.css";
@@ -27,24 +27,51 @@ const Header = (props) => {
         <img src={TheWalletLogo} alt="TheWalletLogo" className={classes.logo}/>
         <h1>The Wallet</h1>
       </div>
-      <nav> 
-        <ul>
-          <li>
-            <NavLink activeStyle={activeLink} to="/wallet"> 
-              Wallet Overview
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeStyle={activeLink} to="/assets-list"> 
-              Available Coins
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-      <div className={classes["display-options"]}>
-          <ShowHideValueButton/>
-          <ThemeButton />
-      </div>
+      {window.innerWidth < 500 &&
+      <div className={classes.mobile}>
+        <nav> 
+          <ul>
+            <li>
+              <NavLink activeStyle={activeLink} to="/wallet"> 
+                Wallet Overview
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeStyle={activeLink} to="/assets-list"> 
+                Available Coins
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <div className={classes["display-options"]}>
+            <ShowHideValueButton/>
+            <ThemeButton />
+        </div>
+      </div> }
+      {window.innerWidth >= 500 &&
+        <Fragment>
+          <nav> 
+            <ul>
+              <li>
+                <NavLink activeStyle={activeLink} to="/wallet"> 
+                  Wallet Overview
+                </NavLink>
+              </li>
+              <li>
+                <NavLink activeStyle={activeLink} to="/assets-list"> 
+                  Available Coins
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
+          <div className={classes["display-options"]}>
+              <ShowHideValueButton/>
+              <ThemeButton />
+          </div>
+        </Fragment>
+      }
+
+
     </header>
   );
 };

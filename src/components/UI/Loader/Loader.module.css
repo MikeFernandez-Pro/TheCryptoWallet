@@ -27,6 +27,18 @@
   .lds-ring div:nth-child(3) {
     animation-delay: -0.15s;
   }
+
+  @media (max-width: 530px) {
+    .lds-ring {
+      width: 30vw;
+      height: 30vw;
+    }
+    .lds-ring div {
+      width: 30vw;
+      height: 30vw;
+    }
+  }
+
   @keyframes lds-ring {
     0% {
       transform: rotate(0deg);

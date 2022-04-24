@@ -29,3 +29,14 @@
     background-color: #3aace1;
     border-color: #817395;
   }
+
+  @media (max-width: 530px) {
+    .validation-button {
+      padding: 1vw 0vw;
+      font-size: 2vw;
+      border-radius: 4vw;
+      width: 95%;
+      margin-left: auto;
+      margin-right: 5%
+    }
+  }

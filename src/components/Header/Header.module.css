@@ -91,15 +91,17 @@
     -webkit-transition-duration: 1s; 
 }
 
-.title:hover .logo {
-    -webkit-transform: rotate(145deg); 
-    -webkit-transition-duration: 1s; 
-}
-
 
 @media (max-width: 530px) {
     .header {
         gap: 0rem;
+        flex-direction: column;
+    }
+    .mobile{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
     }
     .header ul {
         gap: 0rem;
@@ -107,8 +109,11 @@
     .header a {
         font-size: 3vw;
     }
+    .title {
+        padding-bottom: 2vw;
+    }
     .title h1 {
-        font-size: 3.9vw;
+        font-size: 5vw;
     }
     .logo {
         width: 9vw;

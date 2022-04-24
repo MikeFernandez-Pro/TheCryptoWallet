@@ -13,3 +13,9 @@
     color:rgb(255, 255, 255);
     background-color: transparent;
 }
+
+@media (max-width: 530px) {
+  .app {
+    margin: 3vw auto;
+  }
+}

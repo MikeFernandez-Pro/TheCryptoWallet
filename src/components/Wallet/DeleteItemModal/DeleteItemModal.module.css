@@ -1,7 +1,6 @@
 .buttons-container {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .buttons-container button{
@@ -10,3 +9,12 @@
     margin: 2rem;
     font-size: 20px;
 }
+
+@media (max-width: 530px) {
+    .buttons-container button{
+        width: 30%;
+        height: 7vw;
+        margin: 4vw;
+        font-size: 3vw;
+    }
+  }

@@ -7,4 +7,9 @@
   margin-top: 3rem;
 }
 
-
+@media (max-width: 530px) {
+  .wallet {
+    border-radius:50px;
+    margin-top: 3vw;
+  }
+}

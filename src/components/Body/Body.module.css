@@ -110,8 +110,7 @@
 .light-arrow {
   background: #eeeaf4;
   border-top: 3px solid #524589;
-  border-right: 3px solid #524589; 
-
+  border-right: 3px solid #524589;
 }
 
 .sorting-direction-container {
@@ -173,3 +172,89 @@ cursor: pointer;
   margin-top: 0.2rem;
   -webkit-transition-duration: 300ms;
 }
+
+
+@media (min-width: 768px) {
+  .sorting-container {
+    padding-left: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sorting-container {
+    padding-left: 80%;
+  }
+}
+
+@media (max-width: 530px) {
+  .container {
+    margin-top: 1vw;
+  }
+  .sorting-container {
+    padding-left: 60%;
+    margin-top: 3vw;
+    height: 5rem;
+    max-width: 90rem;
+  }
+  .sorting-container label{
+    font-size: 2.4vw;
+    padding-left: 3vw;
+  }
+  .sorting-container ul{
+    width: 30vw;
+    border-radius: 20px;
+    top: 34vw;
+  }
+  .sorting-direction-container {
+    display: flex;
+    width: max-content;
+    align-items: center;
+  }
+  .sorting-direction {
+    width: 6vw;
+    margin-left: 33vw;
+    margin-top: 4.5vw;
+    cursor: pointer;
+  }
+  .selected-sort {
+    font-size: 2.5vw;
+  }
+  .arrow {
+    width:2vw;
+    height:2vw;
+    transform: rotate(135deg);
+    border-top: 1vw solid #eae5f5;
+    border-right: 1vw solid #eae5f5;
+  }
+  
+  .light-arrow {
+    background: #eeeaf4;
+    border-top: 3px solid #524589;
+    border-right: 3px solid #524589;
+  }
+  .sort-choices li {
+    font-size: 2.7vw;
+  }
+ 
+  .scroll-top-container {
+    margin-bottom: 0;
+    margin-top: 5vw;
+  }
+  .scroll-top-container label {
+    font-family: inherit;
+    color: #1FC7D4;
+    font-size: 3vw;
+    font-weight: bold;
+  
+  }
+  .scroll-top-arrow {
+    width:2vw;
+    height:2vw;
+    transform: rotate(-225deg);
+    border: 1v solid #1FC7D4;
+    border-radius: 50%;
+    margin-top: 0.2rem;
+    -webkit-transition-duration: 300ms;
+  }
+}
+
