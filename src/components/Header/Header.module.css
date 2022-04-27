@@ -26,7 +26,6 @@
     gap: 2rem;
 }
 
-
 .header button {
     font-family: 'Noto Sans JP', sans-serif;
     border: none;
@@ -91,6 +90,11 @@
     -webkit-transition-duration: 1s; 
 }
 
+.title:hover .logo {
+    -webkit-transform: rotate(145deg); 
+    -webkit-transition-duration: 1s; 
+}
+
 
 @media (max-width: 530px) {
     .header {
@@ -124,11 +128,5 @@
     }
     .display-options img {
         width: 7.5vw;
-    }
-  }
-
-@keyframes rotate {
-    to {
-      transform: rotate(360deg);
     }
   }
