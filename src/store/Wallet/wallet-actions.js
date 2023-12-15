@@ -34,7 +34,7 @@ export const fetchWallet = () => {
 export const fetchAllowedItemsList = () => {
   return async (dispatch) => {
     let transformedList = []
-    const URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+    const URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&x_cg_demo_api_key=CG-UvgmjN8WCoQiDbgPEi39HZi4"
     
     try {
       const response = await fetch(URL)

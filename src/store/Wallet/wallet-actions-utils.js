@@ -48,21 +48,22 @@ export const fetchItemsFromDB = async () => {
   
 export const constructAPIRequestURL = (wallet) => {
     const URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids="
-    const queries = "&order=market_cap_desc&per_page=1&page=1&sparkline=false"
-    const separator = "%2C%20";
+    const queries = "&order=market_cap_desc&per_page=10&page=1&sparkline=false&locale=en"
+    const separator = "%2C";
+    const api_key = "CG-UvgmjN8WCoQiDbgPEi39HZi4";
     let listAttributs = "";
     
     for (const item in wallet) {
       listAttributs += wallet[item].id + separator
     }
-    
+
     listAttributs = listAttributs.substring(0, listAttributs.length - separator.length);
-    return (URL + listAttributs + queries);
+  
+    return (URL + listAttributs + queries + "&x_cg_demo_api_key=" + api_key);
 };
   
 export const fetchItemsInfosFromAPI = async (wallet) => {
     const URL = constructAPIRequestURL(wallet);
-
     try {
       const response = await fetch(URL);
 
@@ -71,6 +72,8 @@ export const fetchItemsInfosFromAPI = async (wallet) => {
       }
 
       const itemsInfosFromAPI = await response.json();
+      console.log("itemsInfosFromAPI")
+      console.log(itemsInfosFromAPI)
       return itemsInfosFromAPI;
 
     }  catch (error) {
